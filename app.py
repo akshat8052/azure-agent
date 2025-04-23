@@ -63,7 +63,7 @@ async def on_message(message: cl.Message):
         if not last_msg:
             raise Exception("No response from the model.")
 
-        msg.content = last_msg.text.value
+        msg.content = last_msg
         await msg.update()
 
     except Exception as e:
