@@ -12,8 +12,7 @@ from azure.ai.projects.models import (
 load_dotenv()
 
 # Disable verbose connection logs
-logger = logging.getLogger("azure.core.pipeline.policies.http_logging_policy")
-logger.setLevel(logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
 AIPROJECT_CONNECTION_STRING = os.getenv("AIPROJECT_CONNECTION_STRING")
 AGENT_ID = os.getenv("AGENT_ID")
